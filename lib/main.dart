@@ -15,18 +15,18 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "Casa Simples",
       theme: ThemeData(
-        hintColor: PersonalColors.testeAbsurdo,
+        hintColor: PersonalColors.textHint,
         inputDecorationTheme: InputDecorationTheme(
           enabledBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: PersonalColors.hintBackInput)
+            borderSide: BorderSide(color: PersonalColors.backgroundDetails)
           ),
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: TextButton.styleFrom(backgroundColor: PersonalColors.primaryText)
         ),
-        primaryColorDark: PersonalColors.primaryColorDark,
-        primaryColor: PersonalColors.hintBackInput,
-        textSelectionTheme: TextSelectionThemeData(cursorColor: PersonalColors.primaryBack)
+        primaryColorDark: PersonalColors.backgroundDetails,
+        primaryColor: PersonalColors.backgroundDetails,
+        textSelectionTheme: TextSelectionThemeData(cursorColor: PersonalColors.primaryTextColor)
       ),
       home: onConveragePreferenceGuild(),
     );
