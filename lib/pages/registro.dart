@@ -1,4 +1,5 @@
 import 'package:casa_simple/model/personalcolors.dart';
+import 'package:casa_simple/pages/confirmacaoRegistro.dart';
 import 'package:casa_simple/util/utils.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -89,9 +90,23 @@ class _RegistroState extends State<Registro> {
                       style: TextButton.styleFrom(
                           backgroundColor: PersonalColors.backgroundButtons
                       ),
-                      child: Text("Confirmar",style: TextStyle(color: Colors.white)),
+                      child: Text("Cadastre-me",style: TextStyle(color: Colors.white)),
                       onPressed: (){
-                        PersonalUtil.onNavigatorNext(Home(), context);
+                        PersonalUtil.onNavigatorNext(ConfirmacaoRegistro(), context);
+                      },
+                    )
+                ),
+                Container(
+                    width: 130,
+                    height: 44,
+                    margin: EdgeInsets.only(top: 20,left: 10,right: 10),
+                    child: TextButton(
+                      style: TextButton.styleFrom(
+                          backgroundColor: PersonalColors.backgroundSecondButtons
+                      ),
+                      child: Text("Voltar",style: TextStyle(color: Colors.white)),
+                      onPressed: (){
+                        PersonalUtil.onNavigatorBack(context);
                       },
                     )
                 ),

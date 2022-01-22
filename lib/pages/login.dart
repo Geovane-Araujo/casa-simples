@@ -1,4 +1,5 @@
 import 'package:casa_simple/model/personalcolors.dart';
+import 'package:casa_simple/pages/registro.dart';
 import 'package:casa_simple/util/utils.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -91,6 +92,7 @@ class _LoginState extends State<Login> {
                       ),
                       child: Text("Registro",style: TextStyle(color: Colors.white)),
                       onPressed: (){
+                        PersonalUtil.onNavigatorNext(Registro(), context);
                       },
                     )
                 ),

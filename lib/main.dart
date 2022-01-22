@@ -25,6 +25,7 @@ class MyApp extends StatelessWidget {
           style: TextButton.styleFrom(backgroundColor: PersonalColors.primaryText)
         ),
         primarySwatch: PersonalColors.personalSwatch,
+        primaryColorDark: PersonalColors.backgroundDetails,
         primaryColor: PersonalColors.backgroundDetails,
         textSelectionTheme: TextSelectionThemeData(cursorColor: PersonalColors.primaryTextColor)
       ),

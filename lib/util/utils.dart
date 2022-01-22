@@ -9,4 +9,7 @@ class PersonalUtil{
   static onNavigatorBack(context){
     Navigator.pop(context);
   }
+  static onNavigatorOrigin(route,context){
+    Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context) => route), (route) => false);
+  }
 }
