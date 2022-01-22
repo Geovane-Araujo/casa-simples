@@ -17,6 +17,7 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         backgroundColor: PersonalColors.backgroundDetails,
         title: Text("Casa Simples"),
+
       ),
       drawer: Drawer(
         child: ListView(

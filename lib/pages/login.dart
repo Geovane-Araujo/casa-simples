@@ -16,14 +16,18 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: PersonalColors.primaryBack,
-
-      body: Center(
+      backgroundColor: PersonalColors.backgroundColor,
+      body: Container(
+        margin: EdgeInsets.only(top: 0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Container(
+              child: Image.asset("assets/logo/logo2.png",height: 200,width: 200),
+            ),
+            Container(
+              height: 44,
               margin: EdgeInsets.all(10),
               child: TextField(
                 style: TextStyle(
@@ -33,52 +37,94 @@ class _LoginState extends State<Login> {
                 decoration: InputDecoration(
                     filled: true,
                     labelText: "Login",
-                    hintText: "Login",
-                    fillColor: PersonalColors.backgroundDetails,
-                    border: OutlineInputBorder(borderSide: BorderSide(color: PersonalColors.backgroundDetails))
+                    fillColor: PersonalColors.backgroundButtons,
+                    border: OutlineInputBorder(
+                        borderSide: BorderSide(color: PersonalColors.backgroundButtons),
+                    )
                 ),
               ),
             ),
             Container(
+              height: 44,
               margin: EdgeInsets.all(10),
               child: TextField(
                 style: TextStyle(
                   color: PersonalColors.primaryText,
                 ),
                 keyboardType: TextInputType.visiblePassword,
+                obscureText: true,
                 decoration: InputDecoration(
                     filled: true,
                     labelText: "Senha",
-                    hintText: "senha",
-                    fillColor: PersonalColors.backgroundDetails,
-                    border: OutlineInputBorder(borderSide: BorderSide(color: PersonalColors.backgroundDetails))
+                    fillColor: PersonalColors.backgroundButtons,
+                    border: OutlineInputBorder(borderSide: BorderSide(color: PersonalColors.backgroundButtons))
                 ),
+
               ),
             ),
-            Container(
-              margin: EdgeInsets.only(top: 20,left: 10,right: 10),
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                      backgroundColor: PersonalColors.backgroundButtons
-                  ),
-                  child: Text("Entrar",style: TextStyle(color: Colors.white)),
-                  onPressed: (){
-                    PersonalUtil.onNavigatorNext(Home(), context);
-                  },
+            Column(
+              children: [
+                Container(
+                    width: 130,
+                    height: 44,
+                    margin: EdgeInsets.only(top: 20,left: 10,right: 10),
+                    child: TextButton(
+                      style: TextButton.styleFrom(
+                          backgroundColor: PersonalColors.backgroundButtons
+                      ),
+                      child: Text("Entrar",style: TextStyle(color: Colors.white)),
+                      onPressed: (){
+                        PersonalUtil.onNavigatorNext(Home(), context);
+                      },
+                    )
+                ),
+                Container(
+                    width: 130,
+                    height: 44,
+                    margin: EdgeInsets.only(top: 5,left: 10,right: 10),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(200))
+                    ),
+                    child: TextButton(
+                      style: TextButton.styleFrom(
+                        backgroundColor: PersonalColors.backgroundButtons,
+                      ),
+                      child: Text("Registro",style: TextStyle(color: Colors.white)),
+                      onPressed: (){
+                      },
+                    )
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                        margin: EdgeInsets.only(top: 15),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(200))
+                        ),
+                        child: TextButton(
+                          child: Image.asset("assets/images/Google.png"),
+                          onPressed: (){
+                          },
+                        )
+                    ),
+                    Container(
+                        margin: EdgeInsets.only(top: 15),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(200))
+                        ),
+                        child: TextButton(
+                          child: Image.asset("assets/images/facebook.png"),
+                          onPressed: (){
+                          },
+                        )
+                    ),
+                  ],
                 )
+              ],
             ),
-            Container(
-                margin: EdgeInsets.only(top: 5,left: 10,right: 10),
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                      backgroundColor: PersonalColors.backgroundButtons
-                  ),
-                  child: Text("Cadastre-se",style: TextStyle(color: Colors.white)),
-                  onPressed: (){
 
-                  },
-                )
-            )
+
           ],
         ),
       ),

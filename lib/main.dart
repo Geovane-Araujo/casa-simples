@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: TextButton.styleFrom(backgroundColor: PersonalColors.primaryText)
         ),
-        primaryColorDark: PersonalColors.backgroundDetails,
+        primarySwatch: PersonalColors.personalSwatch,
         primaryColor: PersonalColors.backgroundDetails,
         textSelectionTheme: TextSelectionThemeData(cursorColor: PersonalColors.primaryTextColor)
       ),
