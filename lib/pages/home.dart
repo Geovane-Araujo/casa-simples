@@ -8,7 +8,7 @@ import 'package:casa_simple/util/utils.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'agenda.dart';
+import 'shedule/agenda.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
