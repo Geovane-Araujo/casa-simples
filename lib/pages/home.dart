@@ -1,5 +1,6 @@
 import 'package:casa_simple/components/levelBar.dart';
 import 'package:casa_simple/model/personalcolors.dart';
+import 'package:casa_simple/pages/registro.dart';
 import 'package:casa_simple/util/utils.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -22,41 +23,184 @@ class _HomeState extends State<Home> {
         ),
         backgroundColor: PersonalColors.backgroundButtons,
       ),
-      body: ListView(
-        children: [
-          Container(
-            height: 170,
-            //
-            decoration: BoxDecoration(
-              color: PersonalColors.backgroundButtons,
-              borderRadius: BorderRadius.only(bottomLeft: Radius.circular(20),bottomRight: Radius.circular(20))
-            ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                CircleAvatar(
-                  radius: 40,
-                ),
-                Text("Geovane Araújo",
-                  style: TextStyle(
-                    color: Colors.white70,
-                    fontSize: 24
+      body: Container(
+        decoration: BoxDecoration(
+            color: PersonalColors.backgroundColor
+        ),
+        child: Column(
+          children: [
+            Container(
+              height: 180,
+              decoration: BoxDecoration(
+                  color: PersonalColors.backgroundButtons,
+                  borderRadius: BorderRadius.only(bottomLeft: Radius.circular(20),bottomRight: Radius.circular(20))
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  CircleAvatar(
+                    radius: 40,
                   ),
-                  textAlign: TextAlign.center,
-                ),
-                Text("Familia Araújo",
-                  style: TextStyle(
-                      color: Colors.white70,
-                      fontSize: 18
+                  Text("Geovane Araújo",
+                    style: TextStyle(
+                        color: Colors.white70,
+                        fontSize: 24
+                    ),
+                    textAlign: TextAlign.center,
                   ),
-                  textAlign: TextAlign.center,
-                ),
-                LevelBar(level: 2000,maxLevel: 5000)
-              ],
+                  Text("Familia Araújo",
+                    style: TextStyle(
+                        color: Colors.white70,
+                        fontSize: 18
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                  LevelBar(level: 2000,maxLevel: 5000)
+                ],
+              ),
             ),
-          )
-        ],
+            Container(
+              margin: EdgeInsets.only(top: 30,left: 5,right: 5,bottom: 0),
+              height: MediaQuery.of(context).size.height/2.2,
+              child: Center(
+                child: GridView.count(
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 5,
+                  crossAxisSpacing: 5,
+                  children: [
+                    Card(
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: PersonalColors.backgroundButtons,
+                          borderRadius: BorderRadius.all(Radius.circular(20))
+                        ),
+                        child: TextButton(
+                          onPressed: () {  },
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            children: [
+                              Image.asset("assets/images/carrinho.png",height: 40,width: 40),
+                              Container(
+                                  margin: EdgeInsets.only(top: 20),
+                                  child: Text("Lista de Compras",
+                                      style: TextStyle(
+                                          color: PersonalColors.primaryText,
+                                          fontSize: 16
+                                      ),
+                                      textAlign: TextAlign.center
+                                  )
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    Card(
+                      child: Container(
+                        decoration: BoxDecoration(
+                            color: PersonalColors.backgroundButtons,
+                            borderRadius: BorderRadius.all(Radius.circular(20))
+                        ),
+                        child: TextButton(
+                          onPressed: () {  },
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            children: [
+                              Image.asset("assets/images/agenda.png",height: 40,width: 40),
+                              Container(
+                                  margin: EdgeInsets.only(top: 20),
+                                  child: Text("Agenda",
+                                      style: TextStyle(
+                                          color: PersonalColors.primaryText,
+                                          fontSize: 16
+                                      ),
+                                      textAlign: TextAlign.center
+                                  )
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    Card(
+                      child: Container(
+                        decoration: BoxDecoration(
+                            color: PersonalColors.backgroundButtons,
+                            borderRadius: BorderRadius.all(Radius.circular(20))
+                        ),
+                        child: TextButton(
+                          onPressed: () {  },
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            children: [
+                              Image.asset("assets/images/tarefas.png",height: 40,width: 40),
+                              Container(
+                                margin: EdgeInsets.only(top: 20),
+                                child: Text("Tarefas",
+                                    style: TextStyle(
+                                        color: PersonalColors.primaryText,
+                                        fontSize: 16
+                                    ),
+                                    textAlign: TextAlign.center
+                                )
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    Card(
+                      child: Container(
+                        decoration: BoxDecoration(
+                            color: PersonalColors.backgroundButtons,
+                            borderRadius: BorderRadius.all(Radius.circular(20))
+                        ),
+                        child: TextButton(
+                          onPressed: () {  },
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            children: [
+                              Image.asset("assets/images/Familia.png",height: 40,width: 40),
+                              Container(
+                                margin: EdgeInsets.only(top: 20),
+                                child: Text("Composição Familiar",
+                                    style: TextStyle(
+                                      color: PersonalColors.primaryText,
+                                      fontSize: 16,
+                                    ),
+                                    textAlign: TextAlign.center
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 10,left: 10,right: 10),
+              height: 53,
+              width: MediaQuery.of(context).size.width/1,
+              child: TextButton(
+                style: TextButton.styleFrom(
+                  backgroundColor: PersonalColors.backgroundButtons,
+                ),
+                child: Text("Trocar Casa",style: TextStyle(color: Colors.white)),
+                onPressed: (){
+                  PersonalUtil.onNavigatorNext(Registro(), context);
+                },
+              )
+            )
+          ],
+        )
       ),
       drawer: Drawer(
         // backgroundColor: ,
