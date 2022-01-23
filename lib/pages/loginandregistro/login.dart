@@ -1,10 +1,10 @@
 import 'package:casa_simple/model/personalcolors.dart';
-import 'package:casa_simple/pages/registro.dart';
+import 'package:casa_simple/pages/loginandregistro/register.dart';
 import 'package:casa_simple/util/utils.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'home.dart';
+import '../home.dart';
 
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);

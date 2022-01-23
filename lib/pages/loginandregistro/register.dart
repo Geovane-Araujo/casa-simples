@@ -1,10 +1,10 @@
 import 'package:casa_simple/model/personalcolors.dart';
-import 'package:casa_simple/pages/confirmacaoRegistro.dart';
+import 'package:casa_simple/pages/loginandregistro/confirmacaoRegistro.dart';
 import 'package:casa_simple/util/utils.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'home.dart';
+import '../home.dart';
 
 class Registro extends StatefulWidget {
   const Registro({Key? key}) : super(key: key);

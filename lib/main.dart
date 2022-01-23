@@ -1,5 +1,5 @@
 import 'package:casa_simple/model/personalcolors.dart';
-import 'package:casa_simple/pages/login.dart';
+import 'package:casa_simple/pages/loginandregistro/login.dart';
 import 'package:flutter/material.dart';
 
 void main() {

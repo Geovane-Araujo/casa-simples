@@ -1,9 +1,14 @@
 import 'package:casa_simple/components/levelBar.dart';
 import 'package:casa_simple/model/personalcolors.dart';
-import 'package:casa_simple/pages/registro.dart';
+import 'package:casa_simple/pages/FamilyComposition.dart';
+import 'package:casa_simple/pages/loginandregistro/register.dart';
+import 'package:casa_simple/pages/shoppingList.dart';
+import 'package:casa_simple/pages/tasks.dart';
 import 'package:casa_simple/util/utils.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'agenda.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -75,7 +80,7 @@ class _HomeState extends State<Home> {
                         borderRadius: BorderRadius.all(Radius.circular(20))
                       ),
                       child: TextButton(
-                        onPressed: () {  },
+                        onPressed: () { PersonalUtil.onNavigatorNext(ShoppingLIst(), context); },
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -101,7 +106,7 @@ class _HomeState extends State<Home> {
                           borderRadius: BorderRadius.all(Radius.circular(20))
                       ),
                       child: TextButton(
-                        onPressed: () {  },
+                        onPressed: () { PersonalUtil.onNavigatorNext(Agenda(), context); },
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -127,7 +132,7 @@ class _HomeState extends State<Home> {
                           borderRadius: BorderRadius.all(Radius.circular(20))
                       ),
                       child: TextButton(
-                        onPressed: () {  },
+                        onPressed: () { PersonalUtil.onNavigatorNext(Tasks(), context); },
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -153,7 +158,7 @@ class _HomeState extends State<Home> {
                           borderRadius: BorderRadius.all(Radius.circular(20))
                       ),
                       child: TextButton(
-                        onPressed: () {  },
+                        onPressed: () { PersonalUtil.onNavigatorNext(FamilyComposition(), context); },
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.stretch,

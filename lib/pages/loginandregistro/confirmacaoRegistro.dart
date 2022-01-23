@@ -3,7 +3,7 @@ import 'package:casa_simple/util/utils.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'home.dart';
+import '../home.dart';
 import 'login.dart';
 
 class ConfirmacaoRegistro extends StatefulWidget {
