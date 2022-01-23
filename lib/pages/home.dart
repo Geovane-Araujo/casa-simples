@@ -69,115 +69,107 @@ class _HomeState extends State<Home> {
                   mainAxisSpacing: 5,
                   crossAxisSpacing: 5,
                   children: [
-                    Card(
-                      child: Container(
-                        decoration: BoxDecoration(
-                          color: PersonalColors.backgroundButtons,
-                          borderRadius: BorderRadius.all(Radius.circular(20))
-                        ),
-                        child: TextButton(
-                          onPressed: () {  },
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.stretch,
-                            children: [
-                              Image.asset("assets/images/carrinho.png",height: 40,width: 40),
-                              Container(
-                                  margin: EdgeInsets.only(top: 20),
-                                  child: Text("Lista de Compras",
-                                      style: TextStyle(
-                                          color: PersonalColors.primaryText,
-                                          fontSize: 16
-                                      ),
-                                      textAlign: TextAlign.center
-                                  )
-                              )
-                            ],
-                          ),
-                        ),
+                    Container(
+                      decoration: BoxDecoration(
+                        color: PersonalColors.backgroundButtons,
+                        borderRadius: BorderRadius.all(Radius.circular(20))
                       ),
-                    ),
-                    Card(
-                      child: Container(
-                        decoration: BoxDecoration(
-                            color: PersonalColors.backgroundButtons,
-                            borderRadius: BorderRadius.all(Radius.circular(20))
-                        ),
-                        child: TextButton(
-                          onPressed: () {  },
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.stretch,
-                            children: [
-                              Image.asset("assets/images/agenda.png",height: 40,width: 40),
-                              Container(
-                                  margin: EdgeInsets.only(top: 20),
-                                  child: Text("Agenda",
-                                      style: TextStyle(
-                                          color: PersonalColors.primaryText,
-                                          fontSize: 16
-                                      ),
-                                      textAlign: TextAlign.center
-                                  )
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                    Card(
-                      child: Container(
-                        decoration: BoxDecoration(
-                            color: PersonalColors.backgroundButtons,
-                            borderRadius: BorderRadius.all(Radius.circular(20))
-                        ),
-                        child: TextButton(
-                          onPressed: () {  },
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.stretch,
-                            children: [
-                              Image.asset("assets/images/tarefas.png",height: 40,width: 40),
-                              Container(
+                      child: TextButton(
+                        onPressed: () {  },
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: [
+                            Image.asset("assets/images/carrinho.png",height: 40,width: 40),
+                            Container(
                                 margin: EdgeInsets.only(top: 20),
-                                child: Text("Tarefas",
+                                child: Text("Lista de Compras",
                                     style: TextStyle(
                                         color: PersonalColors.primaryText,
                                         fontSize: 16
                                     ),
                                     textAlign: TextAlign.center
                                 )
-                              )
-                            ],
-                          ),
+                            )
+                          ],
                         ),
                       ),
                     ),
-                    Card(
-                      child: Container(
-                        decoration: BoxDecoration(
-                            color: PersonalColors.backgroundButtons,
-                            borderRadius: BorderRadius.all(Radius.circular(20))
-                        ),
-                        child: TextButton(
-                          onPressed: () {  },
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.stretch,
-                            children: [
-                              Image.asset("assets/images/Familia.png",height: 40,width: 40),
-                              Container(
+                    Container(
+                      decoration: BoxDecoration(
+                          color: PersonalColors.backgroundButtons,
+                          borderRadius: BorderRadius.all(Radius.circular(20))
+                      ),
+                      child: TextButton(
+                        onPressed: () {  },
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: [
+                            Image.asset("assets/images/agenda.png",height: 40,width: 40),
+                            Container(
                                 margin: EdgeInsets.only(top: 20),
-                                child: Text("Composição Familiar",
+                                child: Text("Agenda",
                                     style: TextStyle(
-                                      color: PersonalColors.primaryText,
-                                      fontSize: 16,
+                                        color: PersonalColors.primaryText,
+                                        fontSize: 16
                                     ),
                                     textAlign: TextAlign.center
-                                ),
+                                )
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                          color: PersonalColors.backgroundButtons,
+                          borderRadius: BorderRadius.all(Radius.circular(20))
+                      ),
+                      child: TextButton(
+                        onPressed: () {  },
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: [
+                            Image.asset("assets/images/tarefas.png",height: 40,width: 40),
+                            Container(
+                              margin: EdgeInsets.only(top: 20),
+                              child: Text("Tarefas",
+                                  style: TextStyle(
+                                      color: PersonalColors.primaryText,
+                                      fontSize: 16
+                                  ),
+                                  textAlign: TextAlign.center
                               )
-                            ],
-                          ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                          color: PersonalColors.backgroundButtons,
+                          borderRadius: BorderRadius.all(Radius.circular(20))
+                      ),
+                      child: TextButton(
+                        onPressed: () {  },
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: [
+                            Image.asset("assets/images/Familia.png",height: 40,width: 40),
+                            Container(
+                              margin: EdgeInsets.only(top: 20),
+                              child: Text("Composição Familiar",
+                                  style: TextStyle(
+                                    color: PersonalColors.primaryText,
+                                    fontSize: 16,
+                                  ),
+                                  textAlign: TextAlign.center
+                              ),
+                            )
+                          ],
                         ),
                       ),
                     ),
@@ -186,14 +178,20 @@ class _HomeState extends State<Home> {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(top: 10,left: 10,right: 10),
+              margin: EdgeInsets.only(top: 10,left: 5,right: 5),
               height: 53,
               width: MediaQuery.of(context).size.width/1,
               child: TextButton(
                 style: TextButton.styleFrom(
                   backgroundColor: PersonalColors.backgroundButtons,
                 ),
-                child: Text("Trocar Casa",style: TextStyle(color: Colors.white)),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container( margin: EdgeInsets.only(right: 20), child: Image.asset("assets/images/troca.png",height: 40,width: 40)),
+                      Text("Trocar Casa",style: TextStyle(color: Colors.white))
+                    ],
+                ),
                 onPressed: (){
                   PersonalUtil.onNavigatorNext(Registro(), context);
                 },
