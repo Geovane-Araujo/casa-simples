@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "Casa Simples",
       theme: ThemeData(
-        hintColor: PersonalColors.textHint,
+        hintColor: PersonalColors.primaryText,
         inputDecorationTheme: InputDecorationTheme(
           enabledBorder: OutlineInputBorder(
             borderSide: BorderSide(color: PersonalColors.backgroundDetails)

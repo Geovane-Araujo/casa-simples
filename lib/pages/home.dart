@@ -1,3 +1,4 @@
+import 'package:casa_simple/components/levelBar.dart';
 import 'package:casa_simple/model/personalcolors.dart';
 import 'package:casa_simple/util/utils.dart';
 import 'package:flutter/cupertino.dart';
@@ -15,11 +16,50 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: PersonalColors.backgroundDetails,
-        title: Text("Casa Simples"),
-
+        elevation: 0,
+        iconTheme: IconThemeData(
+          color: PersonalColors.backgroundSecondButtons
+        ),
+        backgroundColor: PersonalColors.backgroundButtons,
+      ),
+      body: ListView(
+        children: [
+          Container(
+            height: 170,
+            //
+            decoration: BoxDecoration(
+              color: PersonalColors.backgroundButtons,
+              borderRadius: BorderRadius.only(bottomLeft: Radius.circular(20),bottomRight: Radius.circular(20))
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                CircleAvatar(
+                  radius: 40,
+                ),
+                Text("Geovane Araújo",
+                  style: TextStyle(
+                    color: Colors.white70,
+                    fontSize: 24
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                Text("Familia Araújo",
+                  style: TextStyle(
+                      color: Colors.white70,
+                      fontSize: 18
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                LevelBar(level: 2000,maxLevel: 5000)
+              ],
+            ),
+          )
+        ],
       ),
       drawer: Drawer(
+        // backgroundColor: ,
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
