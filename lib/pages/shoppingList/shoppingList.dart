@@ -70,7 +70,7 @@ class _ShoppingListState extends State<ShoppingList> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          PersonalUtil.onNavigatorNext(FormShedule(), context);
+          PersonalUtil.onNavigatorNext(FormShoppingList(), context);
         },
         backgroundColor: PersonalColors.backgroundButtons,
         child: Icon(Icons.add,color: PersonalColors.primaryText),
