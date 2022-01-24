@@ -1,17 +1,15 @@
 import 'package:casa_simple/model/personalcolors.dart';
+import 'package:casa_simple/util/utils.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class SheduleComponent{
 
-  onSheduleLines(){
+  TextEditingController _data = new TextEditingController();
+  DateFormat formato = DateFormat('dd/MM/yyyy');
 
-    var lines = <Widget>[];
-
-    // for(int i = 0;i < 100;i++){
-    //   Container line = new Container();
-    //   line =
-    //   lines.add(line);
-    // }
+  onSheduleLines() {
 
     return new Container(
       height: 40,
@@ -71,6 +69,72 @@ class SheduleComponent{
           )
         ],
       ),
+    );
+  }
+
+  onFilter(context) {
+    showDialog(context: context,
+        builder: (BuildContext context) => AlertDialog(
+          backgroundColor: PersonalColors.backgroundColor,
+          titleTextStyle: TextStyle(
+            color: PersonalColors.backgroundSecondButtons,
+            fontSize: 20
+          ),
+          title: Text("Filtros", textAlign: TextAlign.center),
+          content: SingleChildScrollView(
+            child: ListBody(
+              children: [
+                Container(
+                  height: 44,
+                  margin: EdgeInsets.all(5),
+                  child: TextField(
+                    controller: _data,
+                    style: TextStyle(
+                      color: PersonalColors.primaryText,
+                    ),
+                    onTap: () async {
+                      DateTime? date = DateTime(1900);
+                      FocusScope.of(context).requestFocus(new FocusNode());
+                      date = await showDatePicker(
+                          context: context,
+                          initialDate: DateTime.now(),
+                          firstDate: DateTime(1900),
+                          lastDate: DateTime(2040)
+                      );
+                      if(date != null)
+                        _data.text = formato.format(date);
+                    },
+                    keyboardType: TextInputType.visiblePassword,
+                    decoration: InputDecoration(
+                        filled: true,
+                        labelText: "Data",
+                        fillColor: PersonalColors.backgroundButtons,
+                        border: OutlineInputBorder(borderSide: BorderSide(color: PersonalColors.backgroundButtons))
+                    ),
+                  ),
+                ),
+                Container(
+                    height: 44,
+                    margin: EdgeInsets.all(5),
+                    // child:
+                ),
+                Container(
+                  height: 44,
+                  margin: EdgeInsets.all(5),
+                  child: TextButton(
+                    style: TextButton.styleFrom(
+                        backgroundColor: PersonalColors.backgroundButtons
+                    ),
+                    child: Text("Filtrar",style: TextStyle(color: Colors.white)),
+                    onPressed: (){
+                      // PersonalUtil.onNavigatorNext(Home(), context);
+                    },
+                  )
+                ),
+              ],
+            ),
+          ),
+        )
     );
   }
 }

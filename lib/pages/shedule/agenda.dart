@@ -32,7 +32,9 @@ class _AgendaState extends State<Agenda> {
           Container(
             child: TextButton(
               child: Icon(Icons.filter_alt_outlined),
-              onPressed: () {},
+              onPressed: () {
+                sheduleComponent.onFilter(context);
+              },
             ),
           ),
         ]
@@ -73,5 +75,6 @@ class _AgendaState extends State<Agenda> {
       ),
     );
   }
+
 
 }
