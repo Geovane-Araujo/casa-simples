@@ -1,5 +1,7 @@
 import 'package:casa_simple/model/personalcolors.dart';
+import 'package:casa_simple/pages/shedule/formShedule.dart';
 import 'package:casa_simple/pages/shedule/sheduleComponent.dart';
+import 'package:casa_simple/util/utils.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -55,11 +57,7 @@ class _AgendaState extends State<Agenda> {
                return InkWell(
                  child: sheduleComponent.onSheduleLines(),
                  onTap: (){
-                   showDialog(context: context,
-                       builder: (BuildContext context) => AlertDialog(
-                         title: Text("Olá Caraleo"),
-                       )
-                   );
+                   PersonalUtil.onNavigatorNext(FormShedule(), context);
                  },
                );
             },
@@ -69,7 +67,9 @@ class _AgendaState extends State<Agenda> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          PersonalUtil.onNavigatorNext(FormShedule(), context);
+        },
         backgroundColor: PersonalColors.backgroundButtons,
         child: Icon(Icons.add,color: PersonalColors.primaryText),
       ),

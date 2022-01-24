@@ -114,11 +114,6 @@ class SheduleComponent{
                   ),
                 ),
                 Container(
-                    height: 44,
-                    margin: EdgeInsets.all(5),
-                    // child:
-                ),
-                Container(
                   height: 44,
                   margin: EdgeInsets.all(5),
                   child: TextButton(
@@ -127,7 +122,6 @@ class SheduleComponent{
                     ),
                     child: Text("Filtrar",style: TextStyle(color: Colors.white)),
                     onPressed: (){
-                      // PersonalUtil.onNavigatorNext(Home(), context);
                     },
                   )
                 ),
