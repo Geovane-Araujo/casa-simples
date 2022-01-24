@@ -2,7 +2,7 @@ import 'package:casa_simple/components/levelBar.dart';
 import 'package:casa_simple/model/personalcolors.dart';
 import 'package:casa_simple/pages/FamilyComposition.dart';
 import 'package:casa_simple/pages/loginandregistro/register.dart';
-import 'package:casa_simple/pages/shoppingList.dart';
+import 'package:casa_simple/pages/shoppingList/shoppingList.dart';
 import 'package:casa_simple/pages/tasks.dart';
 import 'package:casa_simple/util/utils.dart';
 import 'package:flutter/cupertino.dart';
@@ -80,7 +80,7 @@ class _HomeState extends State<Home> {
                         borderRadius: BorderRadius.all(Radius.circular(20))
                       ),
                       child: TextButton(
-                        onPressed: () { PersonalUtil.onNavigatorNext(ShoppingLIst(), context); },
+                        onPressed: () { PersonalUtil.onNavigatorNext(ShoppingList(), context); },
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.stretch,

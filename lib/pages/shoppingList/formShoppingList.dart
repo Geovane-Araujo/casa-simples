@@ -3,14 +3,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-class FormShedule extends StatefulWidget {
-  const FormShedule({Key? key}) : super(key: key);
+class FormShoppingList extends StatefulWidget {
+  const FormShoppingList({Key? key}) : super(key: key);
 
   @override
-  _FormSheduleState createState() => _FormSheduleState();
+  _FormShoppingListState createState() => _FormShoppingListState();
 }
 
-class _FormSheduleState extends State<FormShedule> {
+class _FormShoppingListState extends State<FormShoppingList> {
 
   TextEditingController _data = new TextEditingController();
   DateFormat formato = DateFormat('dd/MM/yyyy');
@@ -25,7 +25,7 @@ class _FormSheduleState extends State<FormShedule> {
         elevation: 1,
         backgroundColor: PersonalColors.backgroundButtons,
         centerTitle: true,
-        title: Text("Cadastro Agendamento", style: TextStyle(color: PersonalColors.primaryText),),
+        title: Text("Cadastro para lista de Compras", style: TextStyle(color: PersonalColors.primaryText),),
         iconTheme: IconThemeData(
             color: PersonalColors.backgroundSecondButtons
         ),
@@ -35,35 +35,6 @@ class _FormSheduleState extends State<FormShedule> {
         color: PersonalColors.backgroundColor,
         child: ListView(
           children: [
-            Container(
-              height: 44,
-              margin: EdgeInsets.all(10),
-              child: TextField(
-                controller: _data,
-                style: TextStyle(
-                  color: PersonalColors.primaryText,
-                ),
-                onTap: () async {
-                  DateTime? date = DateTime(1900);
-                  FocusScope.of(context).requestFocus(new FocusNode());
-                  date = await showDatePicker(
-                      context: context,
-                      initialDate: DateTime.now(),
-                      firstDate: DateTime(1900),
-                      lastDate: DateTime(2040)
-                  );
-                  if(date != null)
-                    _data.text = formato.format(date);
-                },
-                keyboardType: TextInputType.visiblePassword,
-                decoration: InputDecoration(
-                    filled: true,
-                    labelText: "Data",
-                    fillColor: PersonalColors.backgroundButtons,
-                    border: OutlineInputBorder(borderSide: BorderSide(color: PersonalColors.backgroundButtons))
-                ),
-              ),
-            ),
             Container(
               height: 44,
               margin: EdgeInsets.all(10),

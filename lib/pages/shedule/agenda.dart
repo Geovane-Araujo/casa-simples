@@ -1,6 +1,6 @@
 import 'package:casa_simple/model/personalcolors.dart';
 import 'package:casa_simple/pages/shedule/formShedule.dart';
-import 'package:casa_simple/pages/shedule/sheduleComponent.dart';
+import 'package:casa_simple/pages/shedule/sheduleComponents.dart';
 import 'package:casa_simple/util/utils.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +14,7 @@ class Agenda extends StatefulWidget  {
 
 class _AgendaState extends State<Agenda> {
 
-  SheduleComponent sheduleComponent = new SheduleComponent();
+  SheduleComponents sheduleComponent = new SheduleComponents();
 
   @override
   Widget build(BuildContext context) {
