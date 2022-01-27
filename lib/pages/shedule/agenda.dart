@@ -70,8 +70,8 @@ class _AgendaState extends State<Agenda> {
         onPressed: () {
           PersonalUtil.onNavigatorNext(FormShedule(), context);
         },
-        backgroundColor: PersonalColors.backgroundButtons,
-        child: Icon(Icons.add,color: PersonalColors.primaryText),
+        backgroundColor: PersonalColors.backgroundColor,
+        child: Icon(Icons.add,color: PersonalColors.backgroundButtons),
       ),
     );
   }

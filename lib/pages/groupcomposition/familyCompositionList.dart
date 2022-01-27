@@ -1,4 +1,5 @@
 import 'package:casa_simple/model/personalcolors.dart';
+import 'package:casa_simple/pages/groupcomposition/familyCompositionComponents.dart';
 import 'package:casa_simple/pages/shedule/formShedule.dart';
 import 'package:casa_simple/pages/shedule/sheduleComponents.dart';
 import 'package:casa_simple/pages/shoppingList/formShoppingList.dart';
@@ -7,16 +8,16 @@ import 'package:casa_simple/util/utils.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class ShoppingList extends StatefulWidget  {
-  const ShoppingList({Key? key}) : super(key: key);
+class FamilyCompositionList extends StatefulWidget  {
+  const FamilyCompositionList({Key? key}) : super(key: key);
 
   @override
-  _ShoppingListState createState() => _ShoppingListState();
+  _FamilyCompositionListState createState() => _FamilyCompositionListState();
 }
 
-class _ShoppingListState extends State<ShoppingList> {
+class _FamilyCompositionListState extends State<FamilyCompositionList> {
 
-  ShoppingListComponents shoppingListComponents = new ShoppingListComponents();
+  FamilyCompositionComponents shoppingListComponents = new FamilyCompositionComponents();
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +29,7 @@ class _ShoppingListState extends State<ShoppingList> {
           elevation: 1,
           backgroundColor: PersonalColors.backgroundButtons,
           centerTitle: true,
-          title: Text("Lista de Compras", style: TextStyle(color: PersonalColors.primaryText),),
+          title: Text("Composição Familiar", style: TextStyle(color: PersonalColors.primaryText),),
           iconTheme: IconThemeData(
               color: PersonalColors.backgroundSecondButtons
           ),

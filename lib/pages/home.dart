@@ -1,6 +1,6 @@
 import 'package:casa_simple/components/levelBar.dart';
 import 'package:casa_simple/model/personalcolors.dart';
-import 'package:casa_simple/pages/FamilyComposition.dart';
+import 'package:casa_simple/pages/groupcomposition/familyCompositionList.dart';
 import 'package:casa_simple/pages/loginandregistro/register.dart';
 import 'package:casa_simple/pages/shoppingList/shoppingList.dart';
 import 'package:casa_simple/pages/tasks.dart';
@@ -158,7 +158,7 @@ class _HomeState extends State<Home> {
                           borderRadius: BorderRadius.all(Radius.circular(20))
                       ),
                       child: TextButton(
-                        onPressed: () { PersonalUtil.onNavigatorNext(FamilyComposition(), context); },
+                        onPressed: () { PersonalUtil.onNavigatorNext(FamilyCompositionList(), context); },
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.stretch,
