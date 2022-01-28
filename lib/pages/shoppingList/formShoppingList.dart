@@ -42,10 +42,28 @@ class _FormShoppingListState extends State<FormShoppingList> {
                 style: TextStyle(
                   color: PersonalColors.primaryText,
                 ),
-                keyboardType: TextInputType.emailAddress,
+                keyboardType: TextInputType.text,
                 decoration: InputDecoration(
                     filled: true,
-                    labelText: "Titulo",
+                    labelText: "Descrição",
+                    fillColor: PersonalColors.backgroundButtons,
+                    border: OutlineInputBorder(
+                      borderSide: BorderSide(color: PersonalColors.backgroundButtons),
+                    )
+                ),
+              ),
+            ),
+            Container(
+              height: 44,
+              margin: EdgeInsets.all(10),
+              child: TextField(
+                style: TextStyle(
+                  color: PersonalColors.primaryText,
+                ),
+                keyboardType: TextInputType.number,
+                decoration: InputDecoration(
+                    filled: true,
+                    labelText: "Quantidade",
                     fillColor: PersonalColors.backgroundButtons,
                     border: OutlineInputBorder(
                       borderSide: BorderSide(color: PersonalColors.backgroundButtons),
@@ -62,10 +80,9 @@ class _FormShoppingListState extends State<FormShoppingList> {
                 style: TextStyle(
                   color: PersonalColors.primaryText,
                 ),
-                keyboardType: TextInputType.emailAddress,
                 decoration: InputDecoration(
                     filled: true,
-                    labelText: "Descrição",
+                    labelText: "Observação",
                     fillColor: PersonalColors.backgroundButtons,
                     border: OutlineInputBorder(
                       borderSide: BorderSide(color: PersonalColors.backgroundButtons),

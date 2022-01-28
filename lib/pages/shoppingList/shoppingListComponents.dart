@@ -79,6 +79,7 @@ class ShoppingListComponents{
                 )
             ),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
                   margin: EdgeInsets.only(left: 5),

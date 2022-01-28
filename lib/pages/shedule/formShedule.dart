@@ -74,7 +74,7 @@ class _FormSheduleState extends State<FormShedule> {
                 keyboardType: TextInputType.emailAddress,
                 decoration: InputDecoration(
                     filled: true,
-                    labelText: "Titulo",
+                    labelText: "Descrição",
                     fillColor: PersonalColors.backgroundButtons,
                     border: OutlineInputBorder(
                       borderSide: BorderSide(color: PersonalColors.backgroundButtons),
@@ -94,7 +94,7 @@ class _FormSheduleState extends State<FormShedule> {
                 keyboardType: TextInputType.emailAddress,
                 decoration: InputDecoration(
                     filled: true,
-                    labelText: "Descrição",
+                    labelText: "Observações",
                     fillColor: PersonalColors.backgroundButtons,
                     border: OutlineInputBorder(
                       borderSide: BorderSide(color: PersonalColors.backgroundButtons),
