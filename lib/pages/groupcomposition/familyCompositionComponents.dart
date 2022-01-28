@@ -2,6 +2,7 @@ import 'package:casa_simple/model/personalcolors.dart';
 import 'package:casa_simple/util/utils.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:intl/intl.dart';
 
 class FamilyCompositionComponents{
@@ -12,6 +13,7 @@ class FamilyCompositionComponents{
   onSheduleLines(context) {
 
     return new Container(
+      alignment: Alignment.centerRight,
       height: 40,
       //margin: EdgeInsets.only(top: 20),
       decoration: BoxDecoration(
@@ -22,7 +24,7 @@ class FamilyCompositionComponents{
           )
       ),
       child: Row(
-        // textDirection: TextDirection.LTR,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Container(
             width: MediaQuery.of(context).size.width/1.8,
@@ -30,7 +32,7 @@ class FamilyCompositionComponents{
             margin: EdgeInsets.only(left: 10),
             child: Row(
               children: [
-                Text("Arroz",
+                Text("Geovane Araujo",
                   style: TextStyle(
                       color: PersonalColors.primaryText,
                       fontWeight: FontWeight.bold,
@@ -42,7 +44,7 @@ class FamilyCompositionComponents{
           ),
           Container(
             height: 40,
-            width: 40,
+            width: 70,
             decoration: BoxDecoration(
                 border: Border(
                   left: BorderSide(
@@ -51,13 +53,17 @@ class FamilyCompositionComponents{
                 )
             ),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
                   margin: EdgeInsets.only(left: 5),
-                  child: Image.asset("assets/images/carrinho.png",
-                      height: 30,
-                      width: 30,
-                  )
+                  child: Text("1600",
+                    style: TextStyle(
+                        color: PersonalColors.primaryText,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15
+                    ),
+                  ),
                 ),
               ],
             ),
@@ -119,6 +125,52 @@ class FamilyCompositionComponents{
                     onPressed: (){
                     },
                   )
+                ),
+              ],
+            ),
+          ),
+        )
+    );
+  }
+
+  onVinculate(context) {
+    showDialog(context: context,
+        builder: (BuildContext context) => AlertDialog(
+          backgroundColor: PersonalColors.backgroundColor,
+          titleTextStyle: TextStyle(
+              color: PersonalColors.backgroundSecondButtons,
+              fontSize: 20
+          ),
+          title: Text("Vincular Usuários", textAlign: TextAlign.center),
+          content: SingleChildScrollView(
+            child: ListBody(
+              children: [
+                Container(
+                  height: 44,
+                  margin: EdgeInsets.all(5),
+                  child: TextField(
+                    style: TextStyle(
+                      color: PersonalColors.primaryText,
+                    ),
+                    decoration: InputDecoration(
+                        filled: true,
+                        labelText: "Nick Usuário",
+                        fillColor: PersonalColors.backgroundButtons,
+                        border: OutlineInputBorder(borderSide: BorderSide(color: PersonalColors.backgroundButtons))
+                    ),
+                  ),
+                ),
+                Container(
+                    height: 44,
+                    margin: EdgeInsets.all(5),
+                    child: TextButton(
+                      style: TextButton.styleFrom(
+                          backgroundColor: PersonalColors.backgroundButtons
+                      ),
+                      child: Text("Convidar",style: TextStyle(color: Colors.white)),
+                      onPressed: (){
+                      },
+                    )
                 ),
               ],
             ),

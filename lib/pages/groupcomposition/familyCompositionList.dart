@@ -70,8 +70,8 @@ class _FamilyCompositionListState extends State<FamilyCompositionList> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          PersonalUtil.onNavigatorNext(FormShoppingList(), context);
+        onPressed: () async {
+          await shoppingListComponents.onVinculate(context);
         },
         backgroundColor: PersonalColors.backgroundColor,
         child: Icon(Icons.add,color: PersonalColors.backgroundButtons),
