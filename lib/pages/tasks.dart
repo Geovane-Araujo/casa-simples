@@ -36,6 +36,7 @@ class _TasksState extends State<Tasks> {
       body: Container(
         color: PersonalColors.backgroundColor,
       ),
+
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         backgroundColor: PersonalColors.backgroundButtons,

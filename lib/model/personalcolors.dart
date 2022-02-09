@@ -6,7 +6,6 @@ class PersonalColors{
   static Color backgroundSecondButtons = Color(0xFFEA8D7D);
   static Color backgroundButtons = Color(0xFFFFB077);
   static Color backgroundDetails = Color(0xFFF4C097);
-  // static Color backgoundButtonsSecondary = Color(0xFFFFE6E1);
   static Color backgroundColor = Color(0xFFFFE6E1);
   static Color primaryText = Color(0xFFFFFFFF);
   static Color primaryBack  = Color(0xFFFFFFFF);

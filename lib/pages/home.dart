@@ -1,7 +1,7 @@
 import 'package:casa_simple/components/levelBar.dart';
 import 'package:casa_simple/model/personalcolors.dart';
 import 'package:casa_simple/pages/groupcomposition/familyCompositionList.dart';
-import 'package:casa_simple/pages/loginandregistro/register.dart';
+import 'package:casa_simple/pages/loginandregistro/register/register.dart';
 import 'package:casa_simple/pages/shoppingList/shoppingList.dart';
 import 'package:casa_simple/pages/tasks.dart';
 import 'package:casa_simple/util/utils.dart';

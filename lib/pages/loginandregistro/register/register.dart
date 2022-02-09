@@ -1,10 +1,11 @@
 import 'package:casa_simple/model/personalcolors.dart';
 import 'package:casa_simple/pages/loginandregistro/confirmacaoRegistro.dart';
+import 'package:casa_simple/pages/loginandregistro/register/registerservice.dart';
 import 'package:casa_simple/util/utils.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../home.dart';
+import '../../home.dart';
 
 class Registro extends StatefulWidget {
   const Registro({Key? key}) : super(key: key);
@@ -14,6 +15,10 @@ class Registro extends StatefulWidget {
 }
 
 class _RegistroState extends State<Registro> {
+
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,12 +36,31 @@ class _RegistroState extends State<Registro> {
               height: 44,
               margin: EdgeInsets.all(10),
               child: TextField(
+                controller: RegisterService.nick,
                 style: TextStyle(
                   color: PersonalColors.primaryText,
                 ),
                 decoration: InputDecoration(
                     filled: true,
-                    labelText: "Nome Usuário",
+                    labelText: "Nick",
+                    fillColor: PersonalColors.backgroundButtons,
+                    border: OutlineInputBorder(
+                      borderSide: BorderSide(color: PersonalColors.backgroundButtons),
+                    )
+                ),
+              ),
+            ),
+            Container(
+              height: 44,
+              margin: EdgeInsets.all(10),
+              child: TextField(
+                controller: RegisterService.nome,
+                style: TextStyle(
+                  color: PersonalColors.primaryText,
+                ),
+                decoration: InputDecoration(
+                    filled: true,
+                    labelText: "Nome",
                     fillColor: PersonalColors.backgroundButtons,
                     border: OutlineInputBorder(
                         borderSide: BorderSide(color: PersonalColors.backgroundButtons),
@@ -48,6 +72,7 @@ class _RegistroState extends State<Registro> {
               height: 44,
               margin: EdgeInsets.all(10),
               child: TextField(
+                controller: RegisterService.email,
                 style: TextStyle(
                   color: PersonalColors.primaryText,
                 ),
@@ -66,6 +91,7 @@ class _RegistroState extends State<Registro> {
               height: 44,
               margin: EdgeInsets.all(10),
               child: TextField(
+                controller: RegisterService.senha,
                 style: TextStyle(
                   color: PersonalColors.primaryText,
                 ),
@@ -92,7 +118,12 @@ class _RegistroState extends State<Registro> {
                       ),
                       child: Text("Cadastre-me",style: TextStyle(color: Colors.white)),
                       onPressed: (){
-                        PersonalUtil.onNavigatorNext(ConfirmacaoRegistro(), context);
+                        RegisterService rs = new RegisterService();
+                        String result = rs.onSave() as String;
+                        if(result.endsWith("OK")){
+
+                        }
+                        // PersonalUtil.onNavigatorNext(ConfirmacaoRegistro(), context);
                       },
                     )
                 ),
