@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:casa_simple/components/modelInfo.dart';
 import 'package:casa_simple/model/users.dart';
 import 'package:casa_simple/util/utils.dart';
 import 'package:flutter/cupertino.dart';
@@ -14,12 +15,14 @@ class RegisterService{
   static TextEditingController senha = new TextEditingController();
 
 
-  Future<String> onSave() async {
+
+  Future<String> onSave(context) async {
     Users users = onRead();
     var url = Uri.parse("${PersonalUtil.onRoute}/register");
     var response = await http.post(url, body: jsonEncode(users), headers: {"Content-Type": "application/json"});
-    var ret = response.body;
-    return ret;
+    var ret = response.statusCode;
+    ModalInfo.onShowModalInfo(response,context);
+    return "null";
   }
 
   Users onRead(){

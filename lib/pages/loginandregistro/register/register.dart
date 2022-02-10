@@ -119,7 +119,7 @@ class _RegistroState extends State<Registro> {
                       child: Text("Cadastre-me",style: TextStyle(color: Colors.white)),
                       onPressed: (){
                         RegisterService rs = new RegisterService();
-                        String result = rs.onSave() as String;
+                        String result = rs.onSave(context) as String;
                         if(result.endsWith("OK")){
 
                         }
