@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:casa_simple/components/modelInfo.dart';
 import 'package:casa_simple/model/users.dart';
+import 'package:casa_simple/util/requests.dart';
 import 'package:casa_simple/util/utils.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:http/http.dart' as http;
@@ -16,13 +17,9 @@ class RegisterService{
 
 
 
-  Future<String> onSave(context) async {
+  void onSave(context) async {
     Users users = onRead();
-    var url = Uri.parse("${PersonalUtil.onRoute}/register");
-    var response = await http.post(url, body: jsonEncode(users), headers: {"Content-Type": "application/json"});
-    var ret = response.statusCode;
-    ModalInfo.onShowModalInfo(response,context);
-    return "null";
+    Requests.onRequestPostNotAuthenticate(context, "register", users);
   }
 
   Users onRead(){
