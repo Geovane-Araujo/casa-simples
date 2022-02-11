@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 class ModalInfo{
 
 
-  static onShowModalInfo(response,context){
+  static onShowModalInfo(response,context) async{
 
     String text = "";
 

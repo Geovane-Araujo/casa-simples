@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:casa_simple/components/modelInfo.dart';
 import 'package:casa_simple/model/users.dart';
+import 'package:casa_simple/pages/loginandregistro/confirmacaoRegistro.dart';
 import 'package:casa_simple/util/requests.dart';
 import 'package:casa_simple/util/utils.dart';
 import 'package:flutter/cupertino.dart';
@@ -17,9 +18,12 @@ class RegisterService{
 
 
 
-  void onSave(context) async {
+  onSave(context) async {
     Users users = onRead();
-    Requests.onRequestPostNotAuthenticate(context, "register", users);
+    List ret = await Requests.onRequestPostNotAuthenticate(context, "register", users);
+    if(ret[0] == 200){
+      PersonalUtil.onNavigatorOrigin(ConfirmacaoRegistro(), context);
+    }
   }
 
   Users onRead(){

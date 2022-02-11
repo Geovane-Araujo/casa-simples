@@ -7,12 +7,15 @@ import 'package:casa_simple/util/utils.dart';
 class Requests{
 
 
-  static Future<String> onRequestPostNotAuthenticate(context,route, obj) async {
+  static Future<List> onRequestPostNotAuthenticate(context,route, obj) async {
     PersonalUtil.onNavigatorNext(LoadingFull(), context);
     var url = Uri.parse("${PersonalUtil.onRoute}/${route}");
     var response = await http.post(url, body: jsonEncode(obj), headers: {"Content-Type": "application/json"});
     PersonalUtil.onNavigatorBack(context);
-    ModalInfo.onShowModalInfo(response,context);
-    return "null";
+    await ModalInfo.onShowModalInfo(response,context);
+    List list = <Object>[];
+    list.add(response.statusCode);
+    // list.add(jsonDecode(response.body));
+    return list;
   }
 }
